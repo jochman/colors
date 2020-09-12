@@ -1,11 +1,9 @@
 {
-    "love": [
-        {
-            "Red": 0,
-            "Blue": 4,
-            "Purple": 90001
-        }
-    ],
+    "love": {
+        "Red": 0,
+        "Blue": 4,
+        "Purple": 90001
+    },
     "profile": {
         "name": "typicode"
     }
