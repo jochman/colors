@@ -54,10 +54,10 @@ def weird_thing(arg):
 
 ## So what should we do?
 
-# REMOVE THE DOCTEST
+# REMOVE THE DOCSTRING
 
 
-
+<br><br><br><br>
 
 
 ![](https://media.giphy.com/media/PkoZpdQllFpXwJX6Tp/giphy.gif)
@@ -122,7 +122,7 @@ print(weird_thing(dct))
     ----> 7 print(weird_thing(dct))
     
 
-    <ipython-input-2-88071b540756> in weird_thing(arg)
+    <ipython-input-4-88071b540756> in weird_thing(arg)
          12     build = {}
          13     for key, value in arg.items():
     ---> 14         build[key.upper()] = value.lower()
@@ -137,7 +137,7 @@ So what python does with that problem?
 ![](https://media.giphy.com/media/baPIkfAo0Iv5K/giphy.gif)
 
 ## If no one validates it, who cares?
-
+<br><br><br><br>
 # MYPY CARES
 ![](https://camo.githubusercontent.com/68c7827eeb796f3a664f48f5657c04e65e04ae6e/687474703a2f2f6d7970792d6c616e672e6f72672f7374617469632f6d7970795f6c696768742e737667)
 
@@ -314,45 +314,9 @@ from typing import Union
 am_i_a_dict_or_list_or_none: Union[Dict, List]
 
 # You can combine those
-kabya_sharkan_or_hazir_yaml: Optional[Union[Dict, List]]
+kabya_sharkan_or_hazir_yam: Union[Dict, List, str, int]
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-20-26135c298303> in <module>
-         10 # Some return types? we got you with Union
-         11 from typing import Union
-    ---> 12 am_i_a_dict_or_list_or_none: Optional[Dict, List]
-    
-
-    ~/.pyenv/versions/3.8.0/lib/python3.8/typing.py in inner(*args, **kwds)
-        259         except TypeError:
-        260             pass  # All real errors (not unhashable args) are raised below.
-    --> 261         return func(*args, **kwds)
-        262     return inner
-        263 
-
-
-    ~/.pyenv/versions/3.8.0/lib/python3.8/typing.py in __getitem__(self, parameters)
-        362             return _GenericAlias(self, parameters)
-        363         if self._name == 'Optional':
-    --> 364             arg = _type_check(parameters, "Optional[t] requires a single type.")
-        365             return Union[arg, type(None)]
-        366         if self._name == 'Literal':
-
-
-    ~/.pyenv/versions/3.8.0/lib/python3.8/typing.py in _type_check(arg, msg, is_argument)
-        147         return arg
-        148     if not callable(arg):
-    --> 149         raise TypeError(f"{msg} Got {arg!r:.100}.")
-        150     return arg
-        151 
-
-
-    TypeError: Optional[t] requires a single type. Got (typing.Dict, typing.List).
-
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHOnF0zmCUgqs2M6QWRPV_YlwzfLM4bN88MQ&usqp=CAU)
 
 ![](https://media.giphy.com/media/3oD3YveOJWdwIAfZ5e/giphy.gif)
